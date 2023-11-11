@@ -1,5 +1,11 @@
-const getAllJobs = async (req, res) => {
-    res.send('All jobs')
-}
+const { StatusCodes } = require("http-status-codes");
+const Job = require("../models/Job");
 
-module.exports = getAllJobs
+const getAllJobs = async (req, res) => {
+  const jobs = await Job.find({});
+  return res
+    .status(StatusCodes.OK)
+    .json({ error: false, data: { jobs, count: jobs.length } });
+};
+
+module.exports = getAllJobs;

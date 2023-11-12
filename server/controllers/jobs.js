@@ -29,6 +29,7 @@ const updateSingleJob = async (req, res) => {
     body: {
       company,
       role,
+      jobType,
       requirements,
       applyLink,
       salary,

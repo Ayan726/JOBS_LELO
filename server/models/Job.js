@@ -12,6 +12,11 @@ const JobSchema = new mongoose.Schema(
       required: [true, "Please provide the role company is hiring for!!"],
       maxLength: 100,
     },
+    jobType: {
+      type: String,
+      enum: ["full-time", "part-time", "contract", "internship"],
+      required: [true, "Please provide the type of job!!"],
+    },
     requirements: {
       type: String,
       default: "N/A",
@@ -21,8 +26,8 @@ const JobSchema = new mongoose.Schema(
       required: [true, "Please provide an apply link!!"],
     },
     salary: {
-      type: String,
-      default: "N/A",
+      type: Number,
+      default: 0,
     },
     yoe: {
       type: Number,

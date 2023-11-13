@@ -35,7 +35,7 @@ Welcome to the Jobs Lelo API - your solution for managing and retrieving job pos
   - Query Parameters:
     - `company`: Search for jobs by company.
     - `sort`: Sort jobs by date or salary.
-    - `numericFilters`: Filter jobs by salary or year of experience. example:`numericFilters=salary>=65000,yoe<2`.
+    - `numericFilters`: Filter jobs by salary or year of experience. example: `numericFilters=salary>=65000,yoe<2`.
     - `location`: Filter jobs by location.
     - `jobtype`: Filter jobs by job type. only accepts full-time, part-time, contract & internship.
     - `workfrom`: Filter jobs by work location. only accepts home or office.
